@@ -1,4 +1,6 @@
 <script lang="ts">
+	export let path: string;
+
 	import Logo from "../assets/shared/logo.svg";
 	import HamburgerMenu from "../assets/shared/icon-hamburger.svg";
 	import MenuClose from "../assets/shared/icon-close.svg";
@@ -19,17 +21,52 @@
 			</button>
 			{#if visible}
 				<div
-					transition:fly={{ x: 200, duration: 2000 }}
-					class="z-10 absolute bg-white text-darkBlue top-0 bottom-0 left-1/2"
+					transition:fly={{ x: 300, duration: 1000 }}
+					class="z-10 w-[50vw] backdrop-blur-3xl absolute bg-white/5 text-white opacity-100 top-0 bottom-0 left-1/2"
 				>
-					<button on:click={() => (visible = false)}>
-						<img src={MenuClose} alt="Close Menu" />
+					<button
+						on:click={() => (visible = false)}
+						class="w-full py-10 px-8"
+					>
+						<img src={MenuClose} alt="Close Menu" class="ml-auto" />
 					</button>
-					<ul class="">
-						<li><a href="/">00 Home</a></li>
-						<li><a href="/destination">01 Destination</a></li>
-						<li><a href="/crew">02 Crew</a></li>
-						<li><a href="/technology">03 Technology</a></li>
+					<ul class="space-y-4">
+						<li class="flex ml-6 justify-between">
+							<a href="/" class="">
+								<span class="font-bold mx-2">00</span>
+								<span>Home</span>
+							</a>
+							{#if path === "home"}
+								<span class="h-6 w-1 bg-white" />
+							{/if}
+						</li>
+						<li class="flex ml-6 justify-between">
+							<a href="/destination" class="">
+								<span class="font-bold mx-2">01</span>
+								<span>Destination</span>
+							</a>
+							{#if path === "destination"}
+								<span class="h-6 w-1 bg-white" />
+							{/if}
+						</li>
+						<li class="flex ml-6 justify-between">
+							<a href="/crew" class="">
+								<span class="font-bold mx-2">02</span>
+								<span>Crew</span>
+							</a>
+							{#if path === "crew"}
+								<span class="h-6 w-1 bg-white" />
+							{/if}
+						</li>
+						<li class="flex ml-6 justify-between">
+							<a href="/technology" class="">
+								<span class="font-bold mx-2">03</span>
+								<span>Technology</span>
+							</a>
+							{#if path === "technology"}
+								<span class="h-6 w-1 bg-white" />
+							{/if}
+						</li>
 					</ul>
 				</div>
 			{/if}
