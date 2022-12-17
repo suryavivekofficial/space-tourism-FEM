@@ -6,7 +6,7 @@
 	import MenuClose from "../assets/shared/icon-close.svg";
 	import { fly } from "svelte/transition";
 
-	let visible = true;
+	let visible = false;
 	// import { isNavOpen } from "../stores/navStore";
 </script>
 
