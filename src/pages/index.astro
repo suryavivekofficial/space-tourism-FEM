@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
+import Nav from "../components/Nav.svelte";
 ---
 
 <Layout title="Explore">
@@ -8,7 +8,7 @@ import Nav from "../components/Nav.astro";
 		class="flex h-screen w-screen flex-col bg-homeBgMobile bg-cover bg-no-repeat p-6 text-white"
 	>
 		<div>
-			<Nav />
+			<Nav client:load />
 		</div>
 		<section class="flex h-full flex-col justify-between py-12">
 			<div class="my-4 space-y-4 text-center">
