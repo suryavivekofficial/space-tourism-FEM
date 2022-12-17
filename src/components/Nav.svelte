@@ -4,7 +4,7 @@
 	import MenuClose from "../assets/shared/icon-close.svg";
 	import { fly } from "svelte/transition";
 
-	let visible = false;
+	let visible = true;
 	// import { isNavOpen } from "../stores/navStore";
 </script>
 
@@ -18,9 +18,9 @@
 				<img src={HamburgerMenu} alt="Open Menu" />
 			</button>
 			{#if visible}
-				<aside
-					transition:fly={{ x: 200, duration: 1000 }}
-					class=" h-screen z-10 absolute bg-white opacity-5 text-white backdrop-blur-3xl -right-8 bottom-0 top-0"
+				<div
+					transition:fly={{ x: 200, duration: 2000 }}
+					class="z-10 absolute bg-white text-darkBlue top-0 bottom-0 left-1/2"
 				>
 					<button on:click={() => (visible = false)}>
 						<img src={MenuClose} alt="Close Menu" />
@@ -31,7 +31,7 @@
 						<li><a href="/crew">02 Crew</a></li>
 						<li><a href="/technology">03 Technology</a></li>
 					</ul>
-				</aside>
+				</div>
 			{/if}
 		</div>
 	</nav>
