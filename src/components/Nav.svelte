@@ -7,7 +7,6 @@
 	import { fly } from "svelte/transition";
 
 	let visible = false;
-	// import { isNavOpen } from "../stores/navStore";
 </script>
 
 <header class="flex items-center justify-between">
@@ -21,8 +20,8 @@
 			</button>
 			{#if visible}
 				<div
-					transition:fly={{ x: 300, duration: 1000 }}
-					class="z-10 w-[50vw] backdrop-blur-3xl absolute bg-white/5 text-white opacity-100 top-0 bottom-0 left-1/2"
+					transition:fly={{ x: 200, duration: 500 }}
+					class="z-10 w-[70vw] backdrop-blur-3xl fixed bg-white/5 text-white opacity-100 top-0 bottom-0 right-0"
 				>
 					<button
 						on:click={() => (visible = false)}
