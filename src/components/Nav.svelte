@@ -5,19 +5,25 @@
 	import HamburgerMenu from "../assets/shared/icon-hamburger.svg";
 	import MenuClose from "../assets/shared/icon-close.svg";
 	import { fly } from "svelte/transition";
+	import NavLinks from "./NavLinks.svelte";
 
 	let visible = false;
 </script>
 
-<header class="flex items-center justify-between">
-	<div>
+<header class="flex items-center justify-between p-6 md:p-0">
+	<div class="md:px-8">
 		<img src={Logo} alt="logo" />
 	</div>
-	<nav>
-		<div class="lg:hidden">
+	<nav class="md:w-3/5">
+		<div class="hidden md:flex justify-between bg-white/5 p-6 pr-8">
+			<NavLinks {path} />
+		</div>
+
+		<div class="md:hidden">
 			<button on:click={() => (visible = true)}>
 				<img src={HamburgerMenu} alt="Open Menu" />
 			</button>
+
 			{#if visible}
 				<div
 					transition:fly={{ x: 200, duration: 500 }}
@@ -29,44 +35,7 @@
 					>
 						<img src={MenuClose} alt="Close Menu" class="ml-auto" />
 					</button>
-					<ul class="space-y-4">
-						<li class="flex ml-6 justify-between">
-							<a href="/" class="">
-								<span class="font-bold mx-2">00</span>
-								<span>Home</span>
-							</a>
-							{#if path === "home"}
-								<span class="h-6 w-1 bg-white" />
-							{/if}
-						</li>
-						<li class="flex ml-6 justify-between">
-							<a href="/destination" class="">
-								<span class="font-bold mx-2">01</span>
-								<span>Destination</span>
-							</a>
-							{#if path === "destination"}
-								<span class="h-6 w-1 bg-white" />
-							{/if}
-						</li>
-						<li class="flex ml-6 justify-between">
-							<a href="/crew" class="">
-								<span class="font-bold mx-2">02</span>
-								<span>Crew</span>
-							</a>
-							{#if path === "crew"}
-								<span class="h-6 w-1 bg-white" />
-							{/if}
-						</li>
-						<li class="flex ml-6 justify-between">
-							<a href="/technology" class="">
-								<span class="font-bold mx-2">03</span>
-								<span>Technology</span>
-							</a>
-							{#if path === "technology"}
-								<span class="h-6 w-1 bg-white" />
-							{/if}
-						</li>
-					</ul>
+					<NavLinks {path} />
 				</div>
 			{/if}
 		</div>
