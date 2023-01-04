@@ -10,15 +10,21 @@
 	let visible = false;
 </script>
 
-<header class="flex items-center justify-between p-6 md:p-0">
+<header class="flex items-center justify-between p-6 md:p-0 lg:py-6">
 	<div class="md:px-8">
 		<img src={Logo} alt="logo" />
 	</div>
-	<nav class="md:w-3/5">
-		<div class="hidden md:flex justify-between bg-white/5 p-6 pr-8">
+	<nav
+		class="md:w-3/5 lg:w-7/12 relative lg:before:absolute lg:before:right-[97%] lg:before:top-1/2 lg:before:content-[''] lg:before:h-px lg:before:w-7/12 lg:before:z-10 lg:before:bg-white"
+	>
+		<!-- Desktop & Tablet Nav -->
+		<div
+			class="hidden md:flex justify-around bg-white/5 p-6 pr-8 lg:px-12 backdrop-blur-3xl"
+		>
 			<NavLinks {path} />
 		</div>
 
+		<!-- Mobile Nav -->
 		<div class="md:hidden">
 			<button on:click={() => (visible = true)}>
 				<img src={HamburgerMenu} alt="Open Menu" />
