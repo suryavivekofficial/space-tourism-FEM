@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let path: string;
 
+	import type { NavLink } from "../env";
 	import Logo from "../assets/shared/logo.svg";
 	import HamburgerMenu from "../assets/shared/icon-hamburger.svg";
 	import MenuClose from "../assets/shared/icon-close.svg";
@@ -8,6 +9,33 @@
 	import NavLinks from "./NavLinks.svelte";
 
 	let visible = false;
+
+	const navInfo: NavLink[] = [
+		{
+			serial: 0,
+			href: "/",
+			linkText: "HOME",
+			isActive: path === "home",
+		},
+		{
+			serial: 1,
+			href: "/destination",
+			linkText: "DESTINATION",
+			isActive: path === "destination",
+		},
+		{
+			serial: 2,
+			href: "/crew",
+			linkText: "CREW",
+			isActive: path === "crew",
+		},
+		{
+			serial: 3,
+			href: "/technology",
+			linkText: "TECHNOLOGY",
+			isActive: path === "technology",
+		},
+	];
 </script>
 
 <header class="flex items-center justify-between p-6 md:p-0 lg:py-6">
@@ -21,7 +49,14 @@
 		<div
 			class="hidden md:flex justify-around bg-white/5 p-6 pr-8 lg:px-12 backdrop-blur-3xl"
 		>
-			<NavLinks {path} />
+			<ul
+				class="space-y-4 md:space-y-0 md:flex w-full md:justify-between uppercase tracking-wider"
+			>
+				<NavLinks {...navInfo[0]} />
+				<NavLinks {...navInfo[1]} />
+				<NavLinks {...navInfo[2]} />
+				<NavLinks {...navInfo[3]} />
+			</ul>
 		</div>
 
 		<!-- Mobile Nav -->
@@ -41,7 +76,14 @@
 					>
 						<img src={MenuClose} alt="Close Menu" class="ml-auto" />
 					</button>
-					<NavLinks {path} />
+					<ul
+						class="space-y-4 md:space-y-0 md:flex w-full md:justify-between uppercase tracking-wider"
+					>
+						<NavLinks {...navInfo[0]} />
+						<NavLinks {...navInfo[1]} />
+						<NavLinks {...navInfo[2]} />
+						<NavLinks {...navInfo[3]} />
+					</ul>
 				</div>
 			{/if}
 		</div>
