@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.svelte";
 import DestinationImage from "../components/DestinationImage.svelte";
 import DestinationSelect from "../components/DestinationSelect.svelte";
+import DestinationDesc from "../components/DestinationDesc.svelte";
 ---
 
 <Layout title="Destination">
@@ -22,6 +23,9 @@ import DestinationSelect from "../components/DestinationSelect.svelte";
 			</div>
 			<div>
 				<DestinationSelect client:load />
+			</div>
+			<div>
+				<DestinationDesc client:load />
 			</div>
 		</section>
 	</main>
