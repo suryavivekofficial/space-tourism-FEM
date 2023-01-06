@@ -14,11 +14,13 @@ import DestinationDesc from "../components/DestinationDesc.svelte";
 			<Nav client:load path="destination" />
 		</div>
 		<section>
-			<h4>
-				<span>01</span>
-				PICK YOUR DESTINATION
-			</h4>
-			<div>
+			<div class="my-4 w-full text-center">
+				<h4 class="space-x-2 font-barlow">
+					<span class="tracking-widest opacity-25">01</span>
+					<span class="tracking-widest">PICK YOUR DESTINATION</span>
+				</h4>
+			</div>
+			<div class="my-8 flex items-center justify-center">
 				<DestinationImage client:load />
 			</div>
 			<div>
