@@ -10,6 +10,12 @@ module.exports = {
 					"url('/src/assets/home/background-home-desktop.jpg')",
 				homeBgTablet:
 					"url('/src/assets/home/background-home-tablet.jpg')",
+				destinationBgMobile:
+					"url('/src/assets/destination/background-destination-mobile.jpg')",
+				destinationBgTablet:
+					"url('/src/assets/destination/background-destination-tablet.jpg')",
+				destinationBgDesktop:
+					"url('/src/assets/destination/background-destination-desktop.jpg')",
 			},
 		},
 		colors: {

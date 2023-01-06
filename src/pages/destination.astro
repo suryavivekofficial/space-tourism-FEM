@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.svelte";
+import DestinationImage from "../components/DestinationImage.svelte";
+import DestinationSelect from "../components/DestinationSelect.svelte";
+---
+
+<Layout title="Destination">
+	<main
+		class="flex h-screen w-screen flex-col bg-darkBlue bg-destinationBgMobile bg-cover bg-no-repeat text-white md:bg-destinationBgTablet lg:bg-destinationBgDesktop"
+	>
+		<div>
+			<Nav client:load path="destination" />
+		</div>
+		<section>
+			<h4>
+				<span>01</span>
+				PICK YOUR DESTINATION
+			</h4>
+			<div>
+				<DestinationImage client:load />
+			</div>
+			<div>
+				<DestinationSelect client:load />
+			</div>
+		</section>
+	</main>
+</Layout>
