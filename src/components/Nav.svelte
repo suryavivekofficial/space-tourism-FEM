@@ -1,16 +1,16 @@
 <script lang="ts">
 	export let path: string;
 
-	import type { NavLink } from "../env";
+	import type { NavLinkType } from "../env";
 	import Logo from "../assets/shared/logo.svg";
 	import HamburgerMenu from "../assets/shared/icon-hamburger.svg";
 	import MenuClose from "../assets/shared/icon-close.svg";
 	import { fly } from "svelte/transition";
-	import NavLinks from "./NavLinks.svelte";
+	import NavLink from "./NavLink.svelte";
 
 	let visible = false;
 
-	const navInfo: NavLink[] = [
+	const navInfo: NavLinkType[] = [
 		{
 			serial: 0,
 			href: "/",
@@ -52,10 +52,10 @@
 			<ul
 				class="space-y-4 md:space-y-0 md:flex w-full md:justify-between uppercase tracking-wider"
 			>
-				<NavLinks {...navInfo[0]} />
-				<NavLinks {...navInfo[1]} />
-				<NavLinks {...navInfo[2]} />
-				<NavLinks {...navInfo[3]} />
+				<NavLink {...navInfo[0]} />
+				<NavLink {...navInfo[1]} />
+				<NavLink {...navInfo[2]} />
+				<NavLink {...navInfo[3]} />
 			</ul>
 		</div>
 
@@ -79,10 +79,10 @@
 					<ul
 						class="space-y-4 md:space-y-0 md:flex w-full md:justify-between uppercase tracking-wider"
 					>
-						<NavLinks {...navInfo[0]} />
-						<NavLinks {...navInfo[1]} />
-						<NavLinks {...navInfo[2]} />
-						<NavLinks {...navInfo[3]} />
+						<NavLink {...navInfo[0]} />
+						<NavLink {...navInfo[1]} />
+						<NavLink {...navInfo[2]} />
+						<NavLink {...navInfo[3]} />
 					</ul>
 				</div>
 			{/if}

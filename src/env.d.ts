@@ -1,6 +1,6 @@
 /// <reference types="astro/client" />
 
-export type NavLink = {
+export type NavLinkType = {
 	serial: number;
 	href: string;
 	linkText: string;
