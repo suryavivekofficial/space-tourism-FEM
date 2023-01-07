@@ -6,3 +6,14 @@ export type NavLinkType = {
 	linkText: string;
 	isActive: boolean;
 };
+
+export type destinationType = {
+	image: {
+		src: string;
+		alt: string;
+	};
+	title: string;
+	desc: string;
+	distance: string;
+	travelTime: string;
+};
