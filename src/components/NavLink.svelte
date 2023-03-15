@@ -6,7 +6,7 @@
 </script>
 
 <li
-	class={`flex ml-6 md:ml-0 justify-between relative after:content-[''] after:h-full after:w-1 md:after:h-1 md:after:w-[110%] after:absolute after:right-0 md:after:-bottom-6 hover:after:bg-white hover:after:opacity-50 after:duration-300 ${
+	class={`flex ml-6 md:ml-0 justify-between px-2 relative after:content-[''] after:h-full after:w-1 md:after:h-1 md:after:w-full after:absolute after:right-0 md:after:-bottom-6 hover:after:bg-white hover:after:opacity-50 after:duration-300 ${
 		isActive ? "after:bg-white" : ""
 	}`}
 >

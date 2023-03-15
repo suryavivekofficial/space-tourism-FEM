@@ -16,7 +16,7 @@
 				: "px-1 text-voilet"}
 		>
 			<button
-				class="text-sm tracking-widest "
+				class="text-sm tracking-widest md:text-lg"
 				on:click={() => destination.set(destinations[0])}>MOON</button
 			>
 		</li>
@@ -26,7 +26,7 @@
 				: "px-1 text-voilet"}
 		>
 			<button
-				class="text-sm tracking-widest"
+				class="text-sm tracking-widest md:text-lg"
 				on:click={() => destination.set(destinations[1])}>MARS</button
 			>
 		</li>
@@ -36,7 +36,7 @@
 				: "px-1 text-voilet"}
 		>
 			<button
-				class="text-sm tracking-widest"
+				class="text-sm tracking-widest md:text-lg"
 				on:click={() => destination.set(destinations[2])}>EUROPA</button
 			>
 		</li>
@@ -46,7 +46,7 @@
 				: "px-1 text-voilet"}
 		>
 			<button
-				class="text-sm tracking-widest"
+				class="text-sm tracking-widest md:text-lg"
 				on:click={() => destination.set(destinations[3])}>TITAN</button
 			>
 		</li>

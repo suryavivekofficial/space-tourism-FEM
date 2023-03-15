@@ -3,7 +3,7 @@
 	import { destination } from "../utils/svelte/destinationStore";
 </script>
 
-<div class="w-1/2">
+<div class="w-1/2 lg:w-3/5">
 	{#key $destination}
 		<img
 			in:fade
