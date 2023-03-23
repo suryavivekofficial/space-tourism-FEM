@@ -11,7 +11,11 @@
 	}`}
 >
 	<a {href}>
-		<span class="font-bold mx-2 md:hidden lg:inline-block">0{serial}</span>
-		<span class="text-xl font-barlow md:text-base">{linkText}</span>
+		<span class="font-bold mx-2 md:hidden lg:inline-block text-white"
+			>0{serial}</span
+		>
+		<span class="text-xl font-barlow md:text-base text-white"
+			>{linkText}</span
+		>
 	</a>
 </li>
